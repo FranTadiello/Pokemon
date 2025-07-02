@@ -1,74 +1,86 @@
-# Trabalhando com condicionais no Typescript
+Neste exercício, você vai desenvolver uma aplicação web completa, onde seu objetivo será consumir uma API que fornece dados de Pokémons e, com base nesses dados, aplicar uma lógica para descobrir as fraquezas de cada um deles.
 
-```typescript
-const pokemons = [
-{
-  name: "pikachu",
-  types: ["eletric"]
-},
-{
-  name: "gabite",
-  types: ["dragon", "ground"]
-},
+## Você irá praticar:
+
+- Conexão entre backend e frontend  
+- Criação e consumo de endpoints locais ou online (como preferir)  
+- Requisições HTTP (GET)  
+- Manipulação de objetos e arrays em TypeScript  
+- Organização de código em aplicações fullstack (Next.js ou similar)  
+
+## Sobre a API
+
+A API já está pronta e disponível no GitHub caso deseje usar. Ela fornece uma lista de Pokémons em formato JSON, contendo informações como nome, ID e tipos da primeira geração.
+
+### Você pode:
+
+- Clonar o repositório e rodar localmente;  
+- Usar o link da API local como fonte de dados no frontend;  
+- Ou ainda usar uma API online como a [https://pokeapi.co/](https://pokeapi.co/), [https://pokedexapi.com/](https://pokedexapi.com/) ou [https://pogoapi.net/](https://pogoapi.net/)  
+
+**Exemplo de dados da API (entrada):**
+
+```json
+[
+  { "id": 1, "name": "pikachu", "types": ["electric"] },
+  { "id": 2, "name": "gabite", "types": ["dragon", "ground"] }
 ]
 ```
 
-Retorno:
+## Sua Tarefa
+
+Crie uma aplicação web que:
+
+- Consuma os dados da API local (endpoint `GET /api/pokemons`)  
+- Para cada Pokémon, calcule suas fraquezas com base nos seus tipos  
+- Exiba na tela: nome, tipos e fraquezas  
+- Permita filtrar os Pokémons por:
+  - Nome (input de busca)
+  - Tipo (select/dropdown)
+  - Fraqueza (select/dropdown)
+
+**Exemplo de saída esperada no frontend:**
 
 ```json
 {
-  name: "pikachu",
-  types: ["eletric"],
-  weakness: ["ground"]
+  "name": "pikachu",
+  "types": ["electric"],
+  "weakness": ["ground"]
 }
 ```
 
-## Objetivo
+## Clone o repositório
 
-O objetivo é que você consiga verificar as fraquezas de cada pokemon, por exemplo:
-A fraqueza de pikachu é tipo elétrico, logo sua fraqueza é ground e será listada essa fraqueza, outras também, caso tenham.
+Navegue até o diretório onde você deseja clonar o repositório:
 
-## Recursos
+```bash
+cd /caminho/para/seu/diretorio
+```
 
-Você pode seguir a matriz abaixo:
+Execute o comando `git clone` com o URL do repositório:
 
-[![matriz pokemon](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Pokemon_Type_Chart.svg/2048px-Pokemon_Type_Chart.svg.png)](https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Pokemon_Type_Chart.svg/2048px-Pokemon_Type_Chart.svg.png)
+```bash
+git clone https://github.com/Wander06/exercicio-pokemon-types.git
+```
 
-Nesse exercicio podemos usar as condicionais. Importante também utilizar tipos e objetos.
+Isso criará uma cópia local do repositório no seu computador.
 
-<https://www.typescriptlang.org/docs/handbook/2/objects.html>
+Depois de clonar o repositório, entre no diretório do projeto:
 
-Você vai receber o tipo do pokemon e retornar suas fraquezas.
-Lembrando que um pokemon pode ter mais de um tipo.
+```bash
+cd exercicio-pokemon-types
+```
 
-## Critérios de Aceite
+Lembre-se de usar o comando:
 
-- Pokemon pode ter dois tipos e suas fraquezas serão listadas, mesmo que ele tenha algum tipo que anule alguma fraqueza, pode listar todas (essa lógica não é tão necessária).
-- Ter uma tela onde eu possa filtrar por alguma das informações
-- Cada pokemon deve ter um identificador unico, seja pelo nome ou ID
-- Deve ser feito endpoints do backend e conexão com frontend
+```bash
+npm install
+```
 
-### Backend
+Para instalar as dependências necessárias, e:
 
-Precisa ser next? Não necessariamente, mas eu aconselharia vocês a usarem, já que como não é um exercício complexo, vocês podem focar em aprender o next para o backend.
+```bash
+npm run start
+```
 
-### Frontend
-
-Precisa ter next? Não também, mas mesmo conselho que acima.
-Posso usar bibliotecas? Sim, vocês podem usar material-ui, tailwind, etc.. A ideia do front é vocês terem a liberdade criativa de vocês. Ou seja, usem lógica no backend o máximo que puderem, pra deixar bem tranquilo pra na hora do frontend vocês terem essa liberdade.
-Cada uma pode fazer uma UI diferente, a questão aqui é vocês explorarem as tecnologias.
-
-> Podem fazer tela para cada pokemon, lista de pokemons, lista de tipos de pokemons, barra de pesquisa, vocês são livres para isso. Contudo que no exercício vocês contem TODAS as fraquezas do pokemon, mesmo se ele tiver mais de um tipo.
-
-## Tecnologias
-
-- Axios ou Fetch
-- React
-- Next para front (opcional)
-- Next para backend (opcional)
-
-### Observação
-
-Lembre-se de usar o comando ``npm install`` para instalar as dependências necessárias e ``npm run start`` para incializar a aplicação.
-
-Boa sorte!
+Para inicializar a aplicação.
