@@ -20,6 +20,25 @@ class PokemonController {
             })
         }
     }
+    static getIdPokemon = async (req: Request, res: Response) => {
+        try {
+            const id = Number(req.params.id);
+            const pokemon = await PokemonServices.buscaIdPokemon(id);
+
+            if (!pokemon) {
+                return res.status(404).json({ mensagem: "Pokemon não encontrado :(" })
+            }
+
+            res.status(200).json(pokemon);
+        } catch (error) {
+            console.error("Erro ao buscar pokemon:", error);
+
+            res.status(500).json({
+                mensagem: "Erro ao buscar pokemon",
+                detalhe: error instanceof Error ? error.message : String(error)
+            })
+        }
+    }
 }
 
 export { PokemonController };
