@@ -1,12 +1,10 @@
 import Router from "express";
+import {PokemonController} from "../controllers/pokemonController";
 
 export const router = Router();
 
-router.get("/", function (req, res) {
-  // Exemplo de como a api funciona
-  try {
-    res.status(200).send("Hello World");
-  } catch (error) {
-    res.status(500).send("Error fetching data");
-  }
-});
+router.get("/pokemon", PokemonController.getAllPokemon);
+//router.get("/pokemon/:id", PokemonController.getIdPokemon);
+//router.post("/pokemon", PokemonController.adicionarPokemon);
+//router.put("/pokemon/:id", PokemonController.atualizarPokemon);
+//router.delete("/pokemon/:id", PokemonController.deletarPokemon);
