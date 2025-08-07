@@ -5,8 +5,10 @@
   "main": "server.ts",
   "scripts": {
     "start": "nodemon --exec ts-node ./server.ts",
-    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node ./server.ts",
-    "build": "tsc"
+    "dev": "vite",
+    "dev:server": "nodemon --watch 'src/**/*.ts' --exec ts-node ./server.ts",
+    "build": "vite build tsc",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -25,13 +27,19 @@
   "homepage": "https://github.com/aceleradora-TW/exercicio-pokemon-types#readme",
   "dependencies": {
     "axios": "^1.6.8",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.12",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vite": "^7.1.0"
   }
 }
