@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import {PokemonServices} from "../services/pokemonServices";
+import {calcularFraqueza} from "../utils/calcularFraqueza";
 
 class PokemonController {
     static getAllPokemon = async (req: Request, res: Response) => {
@@ -38,6 +39,16 @@ class PokemonController {
                 detalhe: error instanceof Error ? error.message : String(error)
             })
         }
+    }
+    static getFraquezasPorTipo = (req: Request, res: Response) => {
+        const {types} = req.body;
+
+        if(!Array.isArray(types)) {
+            return res.status(400).json({ mensagem: "O campo 'types' deve ser um array" });
+        }
+
+        const fraquezas = calcularFraqueza(types);
+        res.status(200).json({fraquezas});
     }
 }
 

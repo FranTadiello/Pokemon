@@ -1,0 +1,20 @@
+export const relacaoTipoFraq: Record<string, string[]> = {
+  fire: ['water', 'rock', 'ground'],
+  water: ['electric', 'grass'],
+  grass: ['fire', 'ice', 'flying', 'bug'],
+  electric: ['ground'],
+  rock: ['water', 'grass', 'fighting', 'ground', 'steel'],
+  ground: ['water', 'ice', 'grass'],
+  flying: ['electric', 'ice', 'rock'],
+  bug: ['fire', 'flying', 'rock'],
+  ice: ['fire', 'fighting', 'rock', 'steel'],
+  fighting: ['flying', 'psychic', 'fairy'],
+  psychic: ['bug', 'ghost', 'dark'],
+  dark: ['fighting', 'bug', 'fairy'],
+  fairy: ['poison', 'steel'],
+  steel: ['fire', 'fighting', 'ground'],
+  ghost: ['ghost', 'dark'],
+  poison: ['ground', 'psychic'],
+  normal: ['fighting'],
+  dragon: ['ice', 'dragon', 'fairy']
+};
