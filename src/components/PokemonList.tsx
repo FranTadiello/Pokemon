@@ -1,4 +1,4 @@
-import React from "react";
+
 
 type Pokemon = {
     id: number;
@@ -11,8 +11,9 @@ interface Props {
     pokemons: Pokemon[];
 }
 
-export const PokemonList: React.FC<Props> = ({pokemons}) => {
-    return (
+export const PokemonList: React.FC<Props> = ({pokemons}) => { 
+  
+  return (
         <div>
       {pokemons.map((pokemon) => (
         <div key={pokemon.name} style={{ border: "1px solid #ccc", padding: "10px", margin: "10px" }}>

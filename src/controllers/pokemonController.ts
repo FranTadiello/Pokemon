@@ -14,7 +14,6 @@ class PokemonController {
             res.status(200).json(pokemons);
         } catch (error) {
             console.error("Erro ao buscar pokemons:", error);
-
             res.status(500).json({
                 mensagem: "Erro ao buscar pokemons",
                 detalhe: error instanceof Error ? error.message : String(error)
