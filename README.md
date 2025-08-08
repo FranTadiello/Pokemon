@@ -37,7 +37,7 @@ Consumir uma API que fornece dados de Pokémons e, com base nesses dados, aplica
 
 1. Clone o repositório original:
   ```bash
-  git clone https://github.com/Wander06/exercicio-pokemon-types.git
+  git clone [https://github.com/GabrielleGobbi/exercicio-pokemon-types.git]
   ```
 2. Acesse o diretório:
   ```bash
