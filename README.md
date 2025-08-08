@@ -1,86 +1,54 @@
-Neste exercício, você vai desenvolver uma aplicação web completa, onde seu objetivo será consumir uma API que fornece dados de Pokémons e, com base nesses dados, aplicar uma lógica para descobrir as fraquezas de cada um deles.
+# 🧬 Pokemon 
 
-## Você irá praticar:
+Este projeto foi clonado do repositório (https://github.com/GabrielleGobbi/exercicio-pokemon-types.git) como um exercício técnico para praticar integração entre frontend e backend utilizando dados de Pokémons. Eu utilizei esse projeto como base para estudo e desenvolvimento, aplicando ajustes e aprendizados ao longo do processo.
 
-- Conexão entre backend e frontend  
-- Criação e consumo de endpoints locais ou online (como preferir)  
-- Requisições HTTP (GET)  
-- Manipulação de objetos e arrays em TypeScript  
-- Organização de código em aplicações fullstack (Next.js ou similar)  
+---
 
-## Sobre a API
+## 🎯 Objetivo do Projeto
 
-A API já está pronta e disponível no GitHub caso deseje usar. Ela fornece uma lista de Pokémons em formato JSON, contendo informações como nome, ID e tipos da primeira geração.
+Consumir uma API que fornece dados de Pokémons e, com base nesses dados, aplicar uma lógica para descobrir as fraquezas de cada um deles.
 
-### Você pode:
+---
 
-- Clonar o repositório e rodar localmente;  
-- Usar o link da API local como fonte de dados no frontend;  
-- Ou ainda usar uma API online como a [https://pokeapi.co/](https://pokeapi.co/), [https://pokedexapi.com/](https://pokedexapi.com/) ou [https://pogoapi.net/](https://pogoapi.net/)  
+## 🧪 Tecnologias utilizadas
 
-**Exemplo de dados da API (entrada):**
+- React com Vite
+- TypeScript
+- CSS
+- API local com Node.js
+- Ferramentas de filtragem e manipulação de dados
 
-```json
-[
-  { "id": 1, "name": "pikachu", "types": ["electric"] },
-  { "id": 2, "name": "gabite", "types": ["dragon", "ground"] }
-]
-```
+---
 
-## Sua Tarefa
+## 🚀 Funcionalidades implementadas
 
-Crie uma aplicação web que:
+- Conexão entre backend e frontend
+- Requisições HTTP (GET) para consumir dados da API
+- Cálculo de fraquezas com base nos tipos de cada Pokémon
+- Filtros por:
+  - 🔍 Nome (input de busca)
+  - 🔥 Tipo (dropdown)
+  - 🧱 Fraqueza (dropdown)
+- Exibição de nome, tipos e fraquezas de cada Pokémon
 
-- Consuma os dados da API local (endpoint `GET /api/pokemons`)  
-- Para cada Pokémon, calcule suas fraquezas com base nos seus tipos  
-- Exiba na tela: nome, tipos e fraquezas  
-- Permita filtrar os Pokémons por:
-  - Nome (input de busca)
-  - Tipo (select/dropdown)
-  - Fraqueza (select/dropdown)
+---
 
-**Exemplo de saída esperada no frontend:**
+## 📦 Como rodar o projeto
 
-```json
-{
-  "name": "pikachu",
-  "types": ["electric"],
-  "weakness": ["ground"]
-}
-```
-
-## Clone o repositório
-
-Navegue até o diretório onde você deseja clonar o repositório:
-
-```bash
-cd /caminho/para/seu/diretorio
-```
-
-Execute o comando `git clone` com o URL do repositório:
-
-```bash
-git clone https://github.com/Wander06/exercicio-pokemon-types.git
-```
-
-Isso criará uma cópia local do repositório no seu computador.
-
-Depois de clonar o repositório, entre no diretório do projeto:
-
-```bash
-cd exercicio-pokemon-types
-```
-
-Lembre-se de usar o comando:
-
-```bash
-npm install
-```
-
-Para instalar as dependências necessárias, e:
-
-```bash
-npm run start
-```
-
-Para inicializar a aplicação.
+1. Clone o repositório original:
+  ```bash
+  git clone https://github.com/Wander06/exercicio-pokemon-types.git
+  ```
+2. Acesse o diretório:
+  ```bash
+  cd exercicio-pokemon-types
+  ```
+3. Instale as dependências:
+  ```bash
+  npm install
+  ```
+4. Inicie a aplicação:
+  ```bash
+  npm run start
+  ```
+E bons estudos!
