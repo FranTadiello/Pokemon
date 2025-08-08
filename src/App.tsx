@@ -5,6 +5,7 @@ function App() {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
   const [buscarNome, setBuscarNome] = useState("");
   const [tipoSelecionado, setTipoSelecionado] = useState("");
+  const [fraquezaSelecionada, setFraquezaSelecionada] = useState("");
 
   useEffect(() => {
     async function carregarPokemons() {
@@ -19,8 +20,9 @@ function App() {
   const filtraPokemon = pokemons.filter(pokemon => {
     const nomeIgual = pokemon.name.toLowerCase().includes(buscarNome.toLowerCase());
     const tipoIgual = tipoSelecionado === "" || pokemon.types.includes(tipoSelecionado);
+    const fraquezaIgual = fraquezaSelecionada === "" || pokemon.fraquezas.includes(fraquezaSelecionada);
 
-    return nomeIgual && tipoIgual;
+    return nomeIgual && tipoIgual && fraquezaIgual;
   });
 
   return (
@@ -33,29 +35,54 @@ function App() {
         onChange={(e) => setBuscarNome(e.target.value)}
       />
 
-      <select
+     <select
         value={tipoSelecionado}
         onChange={(e) => setTipoSelecionado(e.target.value)}
       >
         <option value="">Todos os tipos</option>
-        <option value="grass">Planta</option>
-        <option value="fire">Fogo</option>
-        <option value="water">Água</option>
-        <option value="electric">Elétrico</option>
-        <option value="psychic">Psíquico</option>
-        <option value="rock">Pedra</option>
-        <option value="ground">Terra</option>
-        <option value="ice">Gelo</option>
-        <option value="bug">Inseto</option>
-        <option value="dragon">Dragão</option>
-        <option value="ghost">Fantasma</option>
-        <option value="dark">Sombrio</option>
-        <option value="steel">Aço</option>
-        <option value="fairy">Fada</option>
-        <option value="fighting">Lutador</option>
-        <option value="normal">Normal</option>
-        <option value="poison">Veneno</option>
-        <option value="flying">Voador</option>
+        <option value="grass">grass</option>
+        <option value="fire">fire</option>
+        <option value="water">water</option>
+        <option value="electric">electric</option>
+        <option value="psychic">psychic</option>
+        <option value="rock">rock</option>
+        <option value="ground">ground</option>
+        <option value="ice">ice</option>
+        <option value="bug">bug</option>
+        <option value="dragon">dragon</option>
+        <option value="ghost">ghost</option>
+        <option value="dark">dark</option>
+        <option value="steel">steel</option>
+        <option value="fairy">fairy</option>
+        <option value="fighting">fighting</option>
+        <option value="normal">normal</option>
+        <option value="poison">poison</option>
+        <option value="flying">flying</option>
+      </select>
+
+      <select
+        value={fraquezaSelecionada}
+        onChange={(e) => setFraquezaSelecionada(e.target.value)}
+      >
+        <option value="">Todas as fraquezas</option>
+        <option value="grass">grass</option>
+        <option value="fire">fire</option>
+        <option value="water">water</option>
+        <option value="electric">electric</option>
+        <option value="psychic">psychic</option>
+        <option value="rock">rock</option>
+        <option value="ground">ground</option>
+        <option value="ice">ice</option>
+        <option value="bug">bug</option>
+        <option value="dragon">dragon</option>
+        <option value="ghost">ghost</option>
+        <option value="dark">dark</option>
+        <option value="steel">steel</option>
+        <option value="fairy">fairy</option>
+        <option value="fighting">fighting</option>
+        <option value="normal">normal</option>
+        <option value="poison">poison</option>
+        <option value="flying">flying</option>
       </select>
 
       {filtraPokemon.length === 0 ? (
