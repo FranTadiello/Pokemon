@@ -1,0 +1,42 @@
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filtros input,
+.filtros select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pokemon-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0rem;
+}
+
+.pokemon-card h3 {
+    margin-top: 0;
+}
+
+.pokemon-card p {
+    margin: 0.5rem 0;
+}
+
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.app {
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+}
